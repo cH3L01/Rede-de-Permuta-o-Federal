@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(7, 112, 51);
+    background-image: url(Images/Fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.espaco {
+    margin-left: 20px;
+}
+
