@@ -12,4 +12,6 @@ No contexto das instituições federais de ensino no Brasil, a mobilidade de ser
 
 ### Colaboradores
 
+[João Henrique Nogueira Glória](https://github.com/Jhnogueira)
 [João Vitor Dias Pires](https://github.com/Daysnb)
+
