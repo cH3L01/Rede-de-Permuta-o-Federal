@@ -16,3 +16,4 @@ No contexto das instituições federais de ensino no Brasil, a mobilidade de ser
 
 [João Vitor Dias Pires](https://github.com/Daysnb)
 
+[Rafael Queiroz Maier](https://github.com/cH3L01)
