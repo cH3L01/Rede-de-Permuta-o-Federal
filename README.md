@@ -12,6 +12,8 @@ No contexto das instituições federais de ensino no Brasil, a mobilidade de ser
 
 ### Colaboradores
 
+[Gabriel Gaspardine Silva](https://github.com/g-g4spar)
+
 [João Henrique Nogueira Glória](https://github.com/Jhnogueira)
 
 [João Vitor Dias Pires](https://github.com/Daysnb)
