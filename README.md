@@ -15,6 +15,8 @@ No contexto das instituições federais de ensino no Brasil, a mobilidade de ser
 
 [Relatório Técnico](https://docs.google.com/document/d/1k5hUbHIdhUB_OKUO9VN03HZ4jkoTru7eyfBNyudU8d0/edit?tab=t.0)
 
+[slides de apresentação segundo trimestre](https://www.canva.com/design/DAGz0Av8ggA/6oiStSwqYrcDUzt_uPIwsg/edit)
+
 
 ### Colaboradores
 
