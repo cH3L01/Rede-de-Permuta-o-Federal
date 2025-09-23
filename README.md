@@ -7,7 +7,7 @@ No contexto das instituições federais de ensino no Brasil, a mobilidade de ser
 [Fluxo de Navegação](https://miro.com/app/board/uXjVJSXUgGY=/)
 
 
-[Códigos do Site]
+[Link Público do site](https://ch3l01.github.io/Rede-de-Permuta-o-Federal/)
 
 
 [Relatório Técnico](https://docs.google.com/document/d/1k5hUbHIdhUB_OKUO9VN03HZ4jkoTru7eyfBNyudU8d0/edit?tab=t.0)
