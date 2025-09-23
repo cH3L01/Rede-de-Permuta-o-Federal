@@ -1,12 +1,149 @@
 body {
-    background-color: rgb(7, 112, 51);
-    background-image: url(Images/Fundo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 100%;
+    --color: rgba(115, 205, 108, 0.3);
+    background-color: #49854c;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+    
 }
 
 .espaco {
     margin-left: 20px;
 }
 
+.orange {
+    color: #caf438;
+}
+
+
+
+.heading {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.c1 {
+    display: block;
+    color: #07e354;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.c2 {
+    display: block;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.form-container {
+    max-width: 800px;
+    margin: 30px;
+    background-color: #032c01;
+    padding: 30px;
+    border-left: 5px solid #caf438;
+    clip-path: polygon( 0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+.form-container .form .input {
+    color: #87a4b6;
+    width: 100%;
+    background-color: #1f7326;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+}
+
+.form-container .form .input:focus {
+    border-left: 5px solid #0baf3a;
+}
+
+.form-container .form .textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #296004;
+    color: #caf438;
+    font-weight: bold;
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+    border-left: 5px solid #0fd93e;
+}
+
+.form-container .form .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+    flex-basis: 70%;
+    background: #08de36;
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: #caf438;
+    font-weight: bold;
+    background: #105903;
+    clip-path: polygon( 0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button:hover {
+    background: #caf438;
+    color: #0b4503;
+}
+
+
+
+
+.site-footer {
+    background-color: #f8f9fa;
+    padding: 5px 0;
+    border-top: 1px solid #e7e7e7;
+    text-align: center;
+    color: #777;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    }
+        
+.site-footer p {
+    margin-bottom: 0;
+}
+        
+.site-footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+        
+.site-footer a:hover {
+    text-decoration: underline;
+}
+footer {
+  transition: transform 0.3s ease-in-out;
+}
