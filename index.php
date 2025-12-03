@@ -1,8 +1,6 @@
 <?php
-    session_start();
     $logado = false;
 ?>
-
 
 <html>
 
@@ -51,6 +49,62 @@
 <!-- BODY -->
 
     <body>
+
+        <?php
+            session_start();
+            $logado = false;
+
+            function pop($mensagem) {
+                echo "
+                <div id='popup-msg' style='
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #333;
+                    color: #fff;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    z-index: 9999;
+                    font-family: Arial;
+                '>
+                    $mensagem
+                </div>
+
+                <script>
+                    const pop = document.getElementById('popup-msg');
+                    pop.style.opacity = '1';
+
+                    setTimeout(() => {
+                        pop.style.opacity = '0';
+                    }, 2500);
+
+                    setTimeout(() => {
+                        pop.remove();
+                    }, 3000);
+                </script>
+                ";
+            };
+
+        ?>
+
+        <!-- POP UP -->
+
+        <?php
+            if (isset($_SESSION['popup'])) {
+                pop($_SESSION['popup']);
+                unset($_SESSION['popup']); // evita repetir o popup no reload
+            };
+        ?>
+
+        <?php
+            if (isset($_SESSION['log'])) {
+                $logado = $_SESSION['log'];
+                unset($_SESSION['logado']); // evita repetir o popup no reload
+            };
+        ?>
         
 
         <!-- NavBar -->
@@ -60,17 +114,15 @@
                 <!-- Botoes -->
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <?php
-                        if (isset($_SESSION['user'])) {
+                        if ($logado) {
                             echo htmlspecialchars($_SESSION['user']) . "</strong> está logado.</p>" .'<p><a href="sair.php"class="btn btn-danger" onclick="Sair()">Sair</a></p>';
-                            $logado = true;
                         } else {
                             echo '<p><a class="btn btn-success" href="Login.php">Login</a></p>';
                         }
                     ?>
                     <?php
-                        if (isset($_SESSION['user'])) {
+                        if ($logado) {
                             echo '<p><a class="btn btn-success disabled" href="Cadastro.php">Cadastro</a></p>';
-                            $logado = true;
                         } else {
                             echo '<p><a class="btn btn-success" href="Cadastro.php">Cadastro</a></p>';
                         }
@@ -78,16 +130,9 @@
                     
                 </div>
             </div>
-
-            <div class="container">
-                <div class="jumbotron">
-                    <h1 class="fonte-customizada">Rede De Permutação</h1>
-                    <p>O recomeço é necessario</p>
-                </div>
-            </div>
         </nav>
 
-        <!-- Bot -->
+        <!-- Botoes -->
         <div class="espaco">
             <p></p>
             <p><a class="btn btn-light" href="Transferencias.php">Transferências</a></p>
@@ -111,6 +156,59 @@
         </div>
         <script src="brmap.js"></script>
         <script>
+             document.addEventListener('DOMContentLoaded', () => {
+                BrMap.Draw({
+                    wrapper: '#br_mine',
+                    // Opcional: se a lib usa selectStates apenas para estilo/seleção visual
+                    selectStates: ['BA'],
+                    callbacks: {
+                        click: async (element, uf) => {
+                            const state = (uf || '').toLowerCase();
+                            const file = state + '.php';
+
+                            try {
+                                const response = await fetch(file, { method: 'HEAD' });
+
+                                if (response.ok) {
+                                    // Arquivo existe → redireciona
+                                    window.location.href = file;
+                                } else {
+                                    // Arquivo não existe
+                                    console.log("Arquivo não encontrado:", file);
+                                }
+                            } catch (err) {
+                                console.log("Erro ao baixar arquivo:", err);
+                            }
+                        },
+                    },
+                });
+            });
+        </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <script>
             document.addEventListener('DOMContentLoaded', () => {
             BrMap.Draw({
                 wrapper: '#br_mine',
@@ -131,8 +229,8 @@
                 },
                 },
             });
-        });
-        </script>
+        }); 
+        </script> -->
     </body>
 
 </html>

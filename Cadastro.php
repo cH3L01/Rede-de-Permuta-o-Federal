@@ -39,24 +39,32 @@
                 <p><a class="btn btn-success disabled" href="Cadastro.php">Cadastro</a></p>
             </div>
     </nav>
+    <?php 
+        
+    
+
+    ?>
 
 
     <div class="form-container">
-        <div class="form">
+        <form class="form" method="POST" action="usuarios.php">
             <span class="heading">Cadastro</span>
             <span class="c1">Encontre seu novo campus agora</span>
 
-            <input class="input" type="text" placeholder="nome" />
-            <input class="input" type="text" placeholder="senha" />
-            <input class="input" type="text" placeholder="email" />
-            <input class="input" type="text" placeholder="cpf" />
-            <input class="input" type="text" placeholder="campus atual" />
-            <input class="input" type="text" placeholder="especialidade" />
+            <input class="input" type="text" name="nome" placeholder="Nome" required>
+            <input class="input" type="password" name="senha" placeholder="Senha" required>
+            <input class="input" type="email" name="email" placeholder="Email" required>
+            <input class="input" type="text" name="cpf" placeholder="CPF" required>
+            <input class="input" type="text" name="campus" placeholder="Campus atual" required>
+            <input class="input" type="text" name="especialidade" placeholder="Especialidade" required>
+
             <span class="c2">Encontre um colega de profissão</span>
+
             <div class="button-container">
-                <div class="btn send-button">Cadastrar</div>
+                <button type="submit" class="btn send-button">Cadastrar</button>
             </div>
-        </div>
+        </form>
+
     </div>
     </div>
     <footer class="navbar bg-body-tertiary fixed-bottom">

@@ -122,7 +122,7 @@
         </div>
     </div>
 </div>
-    <footer class="navbar bg-body-tertiary fixed-bottom">
+    <footer class="navbar bg-body-tertiary fixed">
             <div class="container-fluid d-flex justify-content-center">
                 <div class="text-center">
                     <p class="mb-0">&copy; 2025 Rede de Permutação Federal. Todos os direitos reservados.</p>
